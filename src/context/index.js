@@ -14,7 +14,7 @@ function Toolbar(props) {
   );
 }
 
-export default class Test extends React.Component {
+export default class ContextExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,21 +36,14 @@ export default class Test extends React.Component {
     // uses the theme from state while the one outside uses
     // the default dark theme
     return (
-      <div>
-        <div>
-            <ThemeContext.Provider value={this.state.theme}>
-                <Toolbar changeTheme={this.toggleTheme} />
-            </ThemeContext.Provider>
-        </div>
-        <div>
-          <ThemedButton onClick={()=>{alert('Hi thre!')}}>Hi there</ThemedButton>
-        </div>
-      </div>
+      <>
+        <p>Button using context</p>        
+        <ThemeContext.Provider value={this.state.theme}>
+            <Toolbar changeTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <p>Button don't use context</p>        
+        <ThemedButton onClick={()=>{alert('Hi thre!')}}>Hi there</ThemedButton>
+      </>
     );
   }
 }
-
-    // return(
-    //     <div>Hello world!</div>
-    // )
-// }

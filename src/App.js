@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import Test from './test/Test';
+import ContextExample from './context';
 import StyledComponent from './styled-components';
 
 function App() {
   return (
-    <StyledComponent/>
-    // <Test />
+    <>
+      <StyledComponent/>
+      <br></br>
+      <ContextExample/>
+    </>
   );
 }
 

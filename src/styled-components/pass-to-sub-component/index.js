@@ -64,8 +64,8 @@ const MyComponent2 = (props) => {
 //     }
 // `;
 
-// Styles can be a separate file
-// and can add some more in here
+// Styles can be in a separate file
+// and can add some more styles in here
 const MyStyledComponent = styled(MyComponent)`
     ${MyComponentStyles};
     background: ${props => props.name && props.name === "Hailey" ? "yellow" : ""};
