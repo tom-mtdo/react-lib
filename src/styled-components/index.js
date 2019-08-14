@@ -1,34 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
+import PassToSubComponent from './pass-to-sub-component';
 
-const MyComponent = (props) => {
-    return (
+export default function StyledComponent () {
+    return(
         <>
-            <div className={props.className}>
-                Hello {props.name}
-            </div>
-            <MyComponent2 {...props}/>
+            <PassToSubComponent name="Tom"/>
+            <br></br>
+            <PassToSubComponent name="Hailey"/>
         </>
-    );
-};
-
-const MyComponent2 = (props) => {
-    return (
-        <div className={props.className}>
-            Hello from MyComponent2 {props.name}
-            <div className="blueclass">
-                Hi from blue
-            </div>
-        </div>
-    );
-};
-
-const MyStyledComponent = styled(MyComponent)`
-    color: red;
-
-    .blueclass {
-        color: blue;
-    }
-`;
-
-export default MyStyledComponent;
+    )
+}
